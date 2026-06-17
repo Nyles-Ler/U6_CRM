@@ -1,0 +1,7 @@
+<!-- This view is rendered by the `alphabetized` action in `CustomersController`. -->
+<!-- It displays a list of customers ordered alphabetically by their full name. -->
+<h1>Customers Alphabetized</h1>
+
+<% @customers.each do |customer| %>
+  <%= render partial: "customer", locals: { customer: customer } %>
+<% end %>

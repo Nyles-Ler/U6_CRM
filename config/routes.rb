@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
   # root "articles#index"
+  root to: "customers#index"
+
+  # Added a route for the customers index page
+  get "/customers", to: "customers#index"
+
+  # Added a custom route for the alphabetized customers page
+  get "/customers/alphabetized", to: "customers#alphabetized"
+
 end

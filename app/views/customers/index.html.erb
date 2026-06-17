@@ -1,0 +1,5 @@
+<!-- This view is rendered by the `index` action in `CustomersController`. -->
+<!-- It displays a list of all customers in the database. -->
+<% @customers.each do |customer| %>
+  <%= render partial: "customer", locals: { customer: customer } %>
+<% end %>
