@@ -1,6 +1,7 @@
 <!-- This is a partial view for rendering a single customer. It is used in both the `index` and `alphabetized` views to display customer information consistently. -->
 <div class="customer">
 
+  <!-- Using image_tag -->
   <% if customer.image.attached? %>
     <%= image_tag customer.image, width: 150 %>
   <% else %>
