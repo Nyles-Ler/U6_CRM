@@ -11,4 +11,7 @@ Rails.application.routes.draw do
   # Added a custom route for the alphabetized customers page
   get "/customers/alphabetized", to: "customers#alphabetized"
 
+  # Added a custom route for the customers missing email page
+  get "/customers/missing_email", to: "customers#missing_email"
+
 end

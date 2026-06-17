@@ -9,4 +9,10 @@ class CustomersController < ApplicationController
   def alphabetized
     @customers = Customer.order(:full_name)
   end
+
+  # GET /customers/missing_email
+  def missing_email
+    @customers = Customer.where(email_address: [nil, ""])
+  end
+
 end

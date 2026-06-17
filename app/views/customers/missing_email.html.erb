@@ -1,0 +1,7 @@
+<!-- This view is rendered by the `missing_email` action in `CustomersController`. -->
+<!-- It displays a list of customers who do not have an email address on file. -->
+<h1>Customers Missing Email</h1>
+
+<% @customers.each do |customer| %>
+  <%= render partial: "customer", locals: { customer: customer } %>
+<% end %>
