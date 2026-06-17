@@ -4,8 +4,10 @@
 <h1>Customers Missing Email</h1>
 
 <!-- Links to the all customers and alphabetized views. -->
-<%= link_to "All Customers", root_path %> |
-<%= link_to "Alphabetized List", "/customers/alphabetized" %>
+<div class="nav-links">
+  <%= link_to "All Customers", root_path %> |
+  <%= link_to "Alphabetized List", "/customers/alphabetized" %>
+</div>
 
 <!-- The `@customers` instance variable is set in the `missing_email` action of `CustomersController`. -->
 <% @customers.each do |customer| %>

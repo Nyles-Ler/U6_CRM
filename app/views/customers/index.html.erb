@@ -4,9 +4,10 @@
 <h1>All Customers</h1>
 
 <!-- Links to the alphabetized and missing email views. -->
-<%= link_to "Alphabetized List", "/customers/alphabetized" %> |
-<%= link_to "Customers Missing Email", "/customers/missing_email"%>
-
+<div class="nav-links">
+  <%= link_to "Alphabetized List", "/customers/alphabetized" %> |
+  <%= link_to "Customers Missing Email", "/customers/missing_email"%>
+</div>
 <!-- The `@customers` instance variable is set in the `index` action of `CustomersController`. -->
 <% @customers.each do |customer| %>
   <%= render partial: "customer", locals: { customer: customer } %>
