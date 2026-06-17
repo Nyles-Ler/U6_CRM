@@ -2,6 +2,10 @@
 <!-- It displays a list of customers ordered alphabetically by their full name. -->
 <h1>Customers Alphabetized</h1>
 
+<%= link_to "All Customers", root_path %> |
+<%= link_to "Customers Missing Email", "/customers/missing_email"%>
+
+<!-- The `@customers` instance variable is set in the `alphabetized` action of `CustomersController`. -->
 <% @customers.each do |customer| %>
   <%= render partial: "customer", locals: { customer: customer } %>
 <% end %>

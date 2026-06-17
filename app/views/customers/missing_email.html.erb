@@ -1,7 +1,13 @@
 <!-- This view is rendered by the `missing_email` action in `CustomersController`. -->
 <!-- It displays a list of customers who do not have an email address on file. -->
+
 <h1>Customers Missing Email</h1>
 
+<!-- Links to the all customers and alphabetized views. -->
+<%= link_to "All Customers", root_path %> |
+<%= link_to "Alphabetized List", "/customers/alphabetized" %>
+
+<!-- The `@customers` instance variable is set in the `missing_email` action of `CustomersController`. -->
 <% @customers.each do |customer| %>
   <%= render partial: "customer", locals: { customer: customer } %>
 <% end %>

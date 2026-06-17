@@ -1,5 +1,13 @@
 <!-- This view is rendered by the `index` action in `CustomersController`. -->
 <!-- It displays a list of all customers in the database. -->
+
+<h1>All Customers</h1>
+
+<!-- Links to the alphabetized and missing email views. -->
+<%= link_to "Alphabetized List", "/customers/alphabetized" %> |
+<%= link_to "Customers Missing Email", "/customers/missing_email"%>
+
+<!-- The `@customers` instance variable is set in the `index` action of `CustomersController`. -->
 <% @customers.each do |customer| %>
   <%= render partial: "customer", locals: { customer: customer } %>
 <% end %>
