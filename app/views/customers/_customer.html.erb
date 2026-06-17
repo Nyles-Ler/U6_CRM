@@ -1,0 +1,17 @@
+<div class="customer">
+
+  <% if customer.image.attached? %>
+    <%= image_tag customer.image, width: 150 %>
+  <% else %>
+    <p>No image available</p>
+  <% end %>
+
+  <h2><%= customer.full_name %></h2>
+
+  <p><strong>Phone:</strong> <%= customer.phone_number %></p>
+
+  <p><strong>Email:</strong> <%= customer.email_address.presence || "No email provided" %></p>
+
+  <p><strong>Notes:</strong> <%= customer.notes %></p>
+
+</div>
